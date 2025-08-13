@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Gerenciamento de Baba</title>
+    <style>
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #422c94, #3966a6);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .menu-buttons {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .menu-buttons button {
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-color: #fbbf24;
+    color: #1b212f;
+            transition: background-color 0.2s;
+        }
+
+        .menu-buttons button:hover {
+            background-color: #86a70d;
+        }
+
+        /* RESPONSIVO */
+        @media (min-width: 600px) {
+            .menu-buttons {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .menu-buttons button {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        ⚽ Painel de Gerenciamento de Baba 🐐
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Menu Principal</h2>
+            <div class="menu-buttons">
+                <button onclick="location.href='jogadores.html'">Jogadores</button>
+                <button onclick="location.href='babas.html'">Babas</button>
+                <button onclick="location.href='estatisticas.html'">Estatísticas</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000000, #000000);
+    color: #fff;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-header {
+    background-color: #111827;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    color: #fef3c7;
+}
+
+/* Container principal das páginas */
+.main-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tela-section {
+    background-color: #1f2937;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Inputs e botões globais */
+input, select, button {
+    padding: 7px 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 1px solid #374151;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #fbbf24;
+}
+
+button {
+    background-color: #fbbf24;
+    color: #111827;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #f59e0b;
+}
+
+/* Cards de links no Dashboard */
+.card-link {
+    display: inline-block;
+    background-color: #b5b6b8;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fef3c7;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.card-link:hover {
+    transform: translateY(-5px);
+    background-color: #374151;
+}

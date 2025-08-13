@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Babas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/babas.css">
+</head>
+<style>
+
+            body {
+            background: linear-gradient(135deg, #422c94, #3966a6);}
+</style>
+<body>
+    <header class="main-header">
+        <h1>⚽ Gerenciar Babas</h1>
+    </header>
+
+    <div class="main-container">
+<a href="index.html"><button style="width: 100%;" class="btn-sair" onclick="voltarMenuPrincipal()">Voltar</button></a>
+
+        <!-- Criar Baba -->
+        <div class="tela-section">
+            <h3>Criar Baba</h3>
+            <input type="text" id="nomeBaba" placeholder="Nome do Baba">
+            <input type="date" id="dataBaba">
+            <input type="text" id="localBaba" placeholder="Local">
+            <button onclick="criarBaba()">➕ Criar Baba</button>
+        </div>
+
+        <!-- Selecionar Baba -->
+<div class="tela-section">
+    <h3>Selecionar Baba</h3>
+    <select id="selectBaba" onchange="carregarBaba()"></select>
+    <button onclick="removerBabaSelecionado()">🗑 Apagar Baba</button>
+</div>
+
+
+        <!-- Selecionar jogadores -->
+        <div class="tela-section">
+            <h3>Selecionar jogadores para o Baba</h3>
+            <div id="listaJogadoresDisponiveis" class="lista-jogadores"></div>
+            <button onclick="adicionarJogadoresAoBaba()">Adicionar ao Baba ➕</button>
+        </div>
+
+        <!-- Lista de jogadores no Baba -->
+        <div class="tela-section">
+            <h3>Jogadores no Baba</h3>
+            <ul class="lista-jogadores" id="listaJogadoresBaba"></ul>
+        </div>
+
+        <!-- Sortear times -->
+        <div class="tela-section">
+            <h3>Sortear Times</h3>
+            <input type="number" id="numTimes" placeholder="Número de times">
+            <button onclick="sortearTimesSelecionado()">🎲 Sortear Times</button>
+            <div id="timesBaba" class="babas-grid"></div>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/babas.js"></script>
+</body>
+</html>

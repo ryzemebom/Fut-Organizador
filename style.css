@@ -1,0 +1,474 @@
+/* Reset e estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #67a4ff;
+    padding: 20px;
+    color: #000000;
+}
+.main-header {
+    background: linear-gradient(90deg, #2563eb, #3b82f6); /* degradê azul */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 15%;
+    padding: 20px 10px;
+
+
+    text-align: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+@media(max-width: 600px){
+    .main-header h1 {
+        font-size: 1.3rem; /* tamanho menor para celular */
+    }
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* Dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Telas internas */
+.tela {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Forms */
+input, select, button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+li button {
+    margin-left: 10px;
+}
+
+/* Seleção de jogadores */
+#listaJogadoresSelecao label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li button {
+        margin: 5px 0 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+/* Telas internas */
+.tela {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 750px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Containers internos */
+.tela-section {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.tela-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Inputs e botões dentro das sections */
+.tela-section input,
+.tela-section select,
+.tela-section button {
+    width: 100%;
+    margin: 8px 0;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/* Lista de jogadores e babas */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+li button {
+    margin: 5px 0 0 0;
+}
+
+/* Estatísticas cards */
+.estatistica-card {
+    background: #fff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.estatistica-card p {
+    margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    li, .estatistica-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.tela-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Grid para cards de Babas */
+.babas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.baba-card {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.baba-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.baba-card h4 {
+    margin-bottom: 10px;
+}
+
+.baba-card p {
+    margin: 5px 0;
+}
+
+.baba-card button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+#timesSorteados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+
+
+
+/* Containers internos (cards) */
+.tela-section, .card, .baba-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Ajuste de responsividade */
+@media(max-width: 600px){
+    .main-container {
+        padding: 10px;
+    }
+}
+
+/* Containers internos (cards de telas internas) */
+.tela-section {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tela-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Títulos das seções internas */
+.tela-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #1f2937;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 5px;
+}
+
+/* Botões internos */
+.tela-section button {
+    background-color: #2563eb;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.tela-section button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Inputs e selects padronizados */
+.tela-section input[type="text"],
+.tela-section input[type="number"],
+.tela-section input[type="date"],
+.tela-section select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Listas internas */
+.tela-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tela-section li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background 0.2s;
+}
+
+.tela-section li:hover {
+    background-color: #f3f4f6;
+}
+
+/* Botão remover jogador ou baba */
+.tela-section li button {
+    background-color: #ef4444;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.tela-section li button:hover {
+    background-color: #dc2626;
+}
+
+/* Cards de Babas e Times internos */
+.babas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.baba-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.baba-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Responsividade */
+@media(max-width: 600px){
+    .tela-section {
+        padding: 15px;
+    }
+
+    .babas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.gerenciar-baba .lista-jogadores {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px; /* limita a altura do card */
+    overflow-y: auto;  /* adiciona scroll se necessário */
+}
+
+.gerenciar-baba .lista-jogadores li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.gerenciar-baba .lista-jogadores li:hover {
+    background-color: #f3f4f6;
+}
+.gerenciar-baba .lista-jogadores li input[type="number"] {
+    width: 60px;
+    padding: 3px 5px;
+    margin-left: 5px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.gerenciar-baba .lista-jogadores li button {
+    background-color: #ef4444;
+    padding: 3px 6px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.gerenciar-baba .lista-jogadores li button:hover {
+    background-color: #dc2626;
+}

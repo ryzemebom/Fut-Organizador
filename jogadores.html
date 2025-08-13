@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogadores - Painel de Baba</title>
+    <style>
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #422c94, #3966a6);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color:#1f2937;
+;
+color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group input, .form-group select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .form-group button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            background-color: #3A8DFF;
+            color: #fff;
+            transition: background-color 0.2s;
+        }
+
+        .form-group button:hover {
+            background-color: #2570d3;
+        }
+
+        .lista-jogadores {
+            width: 100%;
+                justify-content: space-between;
+    align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .jogador-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f2f2f2;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        .jogador-item button {
+            background-color: #ff4d4d;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .jogador-item button:hover {
+            background-color: #cc0000;
+        }
+
+
+
+#listaJogadores li:hover {
+    background-color: #babbbc;
+}
+
+#listaJogadores li button {
+    background-color: #ef4444;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+}
+
+#listaJogadores li button:hover {
+    background-color: #dc2626;
+}
+
+        /* RESPONSIVO */
+        @media (min-width: 600px) {
+            .form-group {
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .form-group input, .form-group select {
+                flex: 2;
+            }
+
+            .form-group button {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        ⚽ Jogadores - Painel de Baba 🐐
+    </header>
+
+    <div class="container">
+        <a href="index.html"><button style="    background-color: #fbbf24;
+    color: #111827;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;width: 100%;" class="btn-sair" onclick="voltarMenuPrincipal()">Voltar</button></a>
+        <!-- Formulário para criar jogador -->
+        <div class="card">
+            <h2>Criar Jogador</h2>
+            <div class="form-group">
+                <input type="text" id="nomeJogador" placeholder="Nome do jogador">
+                <select id="nivelJogador">
+                    <option value="1">⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                </select>
+                <button onclick="criarJogador()">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Lista de jogadores -->
+        <div class="card">
+            <h2>Lista de Jogadores</h2>
+            <div class="lista-jogadores" id="listaJogadores">
+                <!-- Jogadores serão inseridos aqui via JS -->
+            </div>
+        </div>
+    </div>
+<script src="js/main.js"></script>
+  <script src="js/jogadores.js"></script>
+</body>
+</html>
